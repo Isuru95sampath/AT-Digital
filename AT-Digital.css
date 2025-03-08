@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #f4f4f4;
+        background-size: cover;
+        background-position: center;
+    
+}
+
+
+
+/* Header Styles */
+header {
+    background-color: #4F46E5;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fce996;
+}
+
+/* Hero Section */
+.hero {
+    width: 60%;
+    color: white;
+    padding: 20px 20px;
+    max-width: 1440px;
+    margin-left: 60px;
+    background: linear-gradient(to right, #4DCA79, #1CBDDD);
+}
+
+
+.hero h2 {
+    font-size: 32px;
+}
+
+.btn {
+    display: inline-block;
+    background: orange;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.service-box {
+    width: 45%;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.learn-more {
+    display: inline-block;
+    color: #4F46E5;
+    margin-top: 10px;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 50px 0;
+    background: #eee;
+}
+
+.faq-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.toggle {
+    float: right;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h2 {
+        font-size: 24px;
+    }
+    .service-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 95%;
+    }
+    .hero h2 {
+        font-size: 20px;
+    }
+    .btn {
+        padding: 10px 20px;
+    }
+}

@@ -293,7 +293,7 @@ nav ul li a:hover {
 
 /* ===== Responsive Styles ===== */
 
-/* 678px - */
+/* 678px  */
 @media screen and (max-width: 678px) {
     .footer {
         flex-direction: column;
@@ -362,10 +362,11 @@ nav ul li a:hover {
 }
 
 /* 375px - Screen Size */
+
 @media screen and (max-width: 375px) {
 
 
-    /* Hamburger Menu Styles */
+    /* Hamburger Menu Styles.... */
     .menu-icon {
         display: block;
         cursor: pointer;

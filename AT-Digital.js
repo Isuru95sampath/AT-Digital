@@ -22,12 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Toggle Menu 
 
-// Function to Toggle Menu on Click
 function toggleMenu() {
     const menu = document.getElementById("menu");
 
     // Toggle the "active" class to show/hide menu
+
     menu.classList.toggle("active");
 }
 

@@ -22,17 +22,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// mobile menu
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
-    const navMenu = document.querySelector("nav ul");
+// Function to Toggle Menu on Click
+function toggleMenu() {
+    const menu = document.getElementById("menu");
 
-    menuIcon.addEventListener("click", function () {
-        menuIcon.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    });
-});
+    // Toggle the "active" class to show/hide menu
+    menu.classList.toggle("active");
+}
+
+
 
 
 

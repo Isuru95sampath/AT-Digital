@@ -3,20 +3,13 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box;
 }
 
 body {
-    
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #ffffff;
-    background-size: cover;
-    background-position: center;
-    
 }
-
-
 
 /* Header Styles */
 header {
@@ -25,7 +18,7 @@ header {
     padding: 15px 0;
 }
 
-.header-container {
+.headerContainer {
     width: 90%;
     max-width: 1440px;
     margin: 0 auto;
@@ -67,10 +60,8 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
-.bgimage{
+.bgimage {
     background: url('Images/bg.jpeg') no-repeat center center/cover;
-    background-size: cover;
-    background-position: center;
     height: 90vh;
     width: 100%;
     position: relative;
@@ -80,17 +71,17 @@ nav ul li a:hover {
     position: relative;
     width: 60%;
     color: white;
-    padding: 20px 20px;
+    padding: 20px;
     max-width: 1440px;
     margin-left: 60px;
     margin-top: -350px;
     background: linear-gradient(to right, #4DCA79, #1CBDDD);
     z-index: 3;
 }
-.hero .container{
+
+.hero .container {
     margin-top: 100px;
 }
-
 
 .hero h2 {
     font-size: 32px;
@@ -122,7 +113,7 @@ nav ul li a:hover {
     width: 100%;
 }
 
-.service-box1, .service-box2 {
+.serviceBox1, .serviceBox2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,28 +124,28 @@ nav ul li a:hover {
     gap: 30px; 
 }
 
-.service-box1 img {
+.serviceBox1 img {
     width: 280px;
     height: auto;
 }
 
-.service-box1 .content {
+.serviceBox1 .content {
     flex: 1;
 }
 
-.service-box1 h3, .service-box2 h3 {
+.serviceBox1 h3, .serviceBox2 h3 {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
 }
 
-.service-box1 p, .service-box2 p {
+.serviceBox1 p, .serviceBox2 p {
     font-size: 14px;
     color: #555;
     margin-bottom: 15px;
 }
 
-.service-box1 .btn, .service-box2 .btn {
+.serviceBox1 .btn, .serviceBox2 .btn {
     padding: 8px 12px;
     background-color: #ff8c00;
     color: #fff;
@@ -163,11 +154,202 @@ nav ul li a:hover {
     font-size: 14px;
 }
 
+/* FAQ Section */
+.faqSection {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
 
+.faqSection h2 {
+    color: #4a3aff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 
-.learn-more {
-    display: inline-block;
-    color: #4F46E5;
+.faqContainer {
+    max-width: 700px;
+    margin: auto;
+}
+
+.faq {
+    background: #f8f8ff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqQuestion h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.faqToggle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a3aff;
+}
+
+.faqAnswer {
+    display: none;
     margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.faqAnswer.active {
+    display: block;
+}
+
+
+/* ========== Responsive Styles ========== */
+
+
+
+/* 1440px Screen Size */
+@media screen and (max-width: 1440px) {
+    .headerContainer {
+        padding: 0 4%;
+    }
+    
+    .serviceBox1, .serviceBox2 {
+        width: 70%;
+    }
+}
+
+/* 1200px Screen Size*/
+@media screen and (max-width: 1200px) {
+    .hero {
+        width: 80%;
+        margin-left: 40px;
+    }
+    
+    .serviceBox1 img {
+        width: 240px;
+    }
+}
+
+/* 768px Screen Size */
+@media screen and (max-width: 768px) {
+    .headerContainer {
+        padding: 0 5%;
+    }
+    
+    .logo h1 {
+        font-size: 22px;
+    }
+    
+    .bgimage {
+        height: 75vh;
+    }
+    
+    .hero {
+        width: 90%;
+        margin: -280px auto 0;
+        padding: 25px;
+    }
+    
+    .serviceBox1, .serviceBox2 {
+        width: 85%;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .serviceBox1 img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* 375px - Screen Size */
+@media screen and (max-width: 375px) {
+
+
+    /* Hamburger Menu Styles */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        z-index: 1000;
+    }
+    
+    .menu-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+    
+    nav ul {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #4F46E5;
+        padding: 20px 0;
+        flex-direction: column;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    /* Header Adjustments */
+    .headerContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 5%;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    /* Hero Section */
+    .bgimage {
+        height: 60vh;
+    }
+    
+    .hero {
+        margin-top: -180px;
+        padding: 15px;
+    }
+    
+    .hero h2 {
+        font-size: 20px;
+    }
+    
+    /* Services Section */
+    .serviceBox1, .serviceBox2 {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    /* FAQ Section */
+    .faqQuestion h3 {
+        font-size: 14px;
+    }
+    
+    .faqAnswer {
+        font-size: 13px;
+    }
 }
 
